@@ -1,0 +1,11 @@
+<form [formGroup]="fg" (submit)="submitForm()">
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+  </mat-form-field>
+
+  <button [disabled]="fg.invalid" mat-raised-button>שליחה</button>
+</form>
+<div *ngIf="result">
+  {{result}}
+</div>
